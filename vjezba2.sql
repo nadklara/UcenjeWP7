@@ -2,6 +2,6 @@
 
 --use vjezba2
 
-create table ne znam(
+create table vjezbanje2 (
 naziv varchar (50)
 );
