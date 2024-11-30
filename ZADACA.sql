@@ -1,1 +1,7 @@
-﻿create database ZADACA
+﻿--create database ZADACA
+
+--use ZADACA
+
+create table SMJER(
+naziv varchar (50)
+);
