@@ -31,3 +31,8 @@ naziv varchar(20),
 smjer int,
 predavac varchar(50)
 );
+
+create table clanovi(
+grupa int,
+polaznik int
+);
