@@ -27,9 +27,9 @@ email varchar(100) not null
 );
 
 create table grupe(
-sifra int not null primary key identity (1,1),
+sifra int not null primary key identity (1,1), --primarni kljuc
 naziv varchar(20) not null,
-smjer int not null references smjerovi (sifra),
+smjer int not null references smjerovi (sifra), --vanjski kljucevi
 predavac varchar(50) 
 );
 
@@ -37,4 +37,3 @@ create table clanovi(
 grupa int not null references grupe (sifra),
 polaznik int not null references polaznici(sifra)
 );
-
