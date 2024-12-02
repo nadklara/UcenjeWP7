@@ -14,3 +14,10 @@ vrstaIspita varchar(50),
 datum datetime,
 pristupio bit
 );
+
+create table Pristupnici(
+IspitniRok int,
+student varchar(50),
+brojBodova int,
+ocjena char(10)
+);
