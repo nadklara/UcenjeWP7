@@ -1,4 +1,4 @@
-﻿--create database edunovawp7;
+﻿﻿--create database edunovawp7;
 
 use master;
 go
@@ -38,11 +38,13 @@ grupa int not null references grupe (sifra),
 polaznik int not null references polaznici(sifra)
 );
 
-
+select * from smjerovi
 --1
 insert into smjerovi 
 (naziv, trajanje, cijena, vaucer, izvodiseod) values
 ('Web programiranje',225,1245.99,1,'2024-09-07 17:00:00');
+
+select * from smjerovi
 
 insert into smjerovi(naziv) values
 --2
@@ -52,11 +54,15 @@ insert into smjerovi(naziv) values
 --4
 ('Knjigovodstvo');
 
+select * from grupe
+
 insert into grupe (naziv, smjer) values
 ('WP6',1),
 ('WP7',1),
 ('JP27',2),
 ('K12',4);
+
+select * from polaznici
 
 
 INSERT INTO polaznici (ime, prezime, email) VALUES 
@@ -87,3 +93,12 @@ INSERT INTO polaznici (ime, prezime, email) VALUES
 ('Luka', 'Jurak', 'jurakluka18@gmail.com'),
 ('Ivan', 'Strmečki', 'ivan.strmecki8@gmail.com'),
 ('Bruno', 'Bašić', 'brunobasic031@gmail.com');
+
+
+insert into clanovi (grupa, polaznik) values
+(2,1),(2,2),(2,3),(2,4),(2,5),(2,6),(2,7),(2,8),
+(2,9),(2,10),(2,11),(2,12),(2,13),(2,14),(2,15),(2,16),
+(2,17),(2,18),(2,19),(2,20),(2,21),(2,22),(2,23),(2,24),
+(2,25),(2,26),(2,27),
+
+(3,7), (3,17), (3,27);
