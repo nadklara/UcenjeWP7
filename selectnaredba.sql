@@ -40,3 +40,45 @@ where sifra=2;
 
 select * from smjerovi
 where izvodiseod between '2021-01-01' and '2024-06-03'
+
+use knjiznica;
+
+select * from autor order by prezime asc, ime desc;
+
+select prezime, ime from autor order by prezime asc, ime desc;
+
+select prezime, ime from autor order by 1 asc, 2 desc;
+
+select top 10 percent * from autor;
+
+select top 10 * from mjesto;
+
+select top 10 * into nova from mjesto;
+
+select * from nova;
+drop table nova;
+
+select * from autor
+select top 10 * from autor;
+
+insert into autor (sifra, ime, prezime, datumrodenja) values
+(4, 'Klara', 'Nađ', '1995-11-30');
+
+select * from autor where sifra =8000;
+delete autor where sifra =8000;
+
+select count (*) from katalog;
+
+select * from katalog
+where naslov like '%ljubav%' and
+sifra in (2541, 2660, 2664, 2938);
+
+select * from izdavac where naziv like '%d.o.o.%';
+--147
+
+select * from izdavac where naziv like '%d.%o%o' or naziv like '%d%o%o.%' ;
+--150
+
+use svastara;
+
+select count(*) from Artikli;
